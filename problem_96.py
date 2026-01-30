@@ -7,8 +7,10 @@ def two_sum(nums, target):
         complement = target - nums[i]
         if complement in seen:
             return [seen[complement], i]
-        seen[nums[i]] = i
+        if nums[i] not in seen:
+            seen[nums[i]] = i
     return []
 
 numbers = [2, 7, 11, 15]
 print(f"Indices: {two_sum(numbers, 9)}")
+
