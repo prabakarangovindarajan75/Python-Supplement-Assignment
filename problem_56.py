@@ -3,11 +3,8 @@
 
 def remove_vowels(text):
     vowels = "aeiouAEIOU"
-    result = ""
-    for char in text:
-        if char not in vowels:
-            result += char
-    return result
+    return "".join([c for c in text if c not in vowels])
 
 sentence = "Hello World"
 print(f"Without vowels: {remove_vowels(sentence)}")
+
