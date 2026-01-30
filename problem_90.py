@@ -8,7 +8,5 @@ def find_median(lst):
         median = (sorted_lst[n//2] + sorted_lst[n//2 - 1]) / 2
     else:
         median = sorted_lst[n//2]
-    return median
+    return int(median) if median.is_integer() else median
 
-numbers = [1, 3, 5, 7, 9]
-print(f"Median: {find_median(numbers)}")
