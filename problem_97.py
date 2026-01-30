@@ -7,9 +7,10 @@ def remove_element(nums, val):
         if nums[j] != val:
             nums[i] = nums[j]
             i += 1
-    return i
+    return i, nums[:i]
 
 numbers = [3, 2, 2, 3, 4, 5]
-length = remove_element(numbers, 3)
+length, modified = remove_element(numbers, 3)
 print(f"New length: {length}")
-print(f"Modified list: {numbers[:length]}")
+print(f"Modified list: {modified}")
+
