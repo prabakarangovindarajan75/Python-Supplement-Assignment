@@ -2,6 +2,9 @@
 # Find and fix the error
 
 def max_subarray_sum(arr):
+    if not arr:
+        return 0  # or None, depending on your requirement
+    
     max_sum = arr[0]
     current_sum = arr[0]
     
