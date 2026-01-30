@@ -3,9 +3,9 @@
 
 text = "python programming"
 uppercase = ""
+
 for char in text:
-    if char >= 'a' and char <= 'z':
-        uppercase += chr(ord(char) - 32)
-    else:
-        uppercase += char
+    uppercase += char.upper()
+
 print(f"Uppercase: {uppercase}")
+
