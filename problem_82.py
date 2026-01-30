@@ -2,11 +2,9 @@
 # Find and fix the error
 
 def remove_adjacent_duplicates(text):
-    result = []
+    result = ""
     for char in text:
-        if len(result) == 0 or result[-1] != char:
-            result.append(char)
-    return "".join(result)
+        if not result or result[-1] != char:
+            result += char
+    return result
 
-s = "programming"
-print(f"After removal: {remove_adjacent_duplicates(s)}")
