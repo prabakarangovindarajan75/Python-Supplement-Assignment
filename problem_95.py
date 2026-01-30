@@ -2,6 +2,7 @@
 # Find and fix the error
 
 def roman_to_int(s):
+    s = s.upper()  # <-- fix
     roman = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
     total = 0
     for i in range(len(s)):
@@ -12,3 +13,5 @@ def roman_to_int(s):
     return total
 
 print(f"XIV = {roman_to_int('XIV')}")
+print(f"xiv = {roman_to_int('xiv')}")
+
