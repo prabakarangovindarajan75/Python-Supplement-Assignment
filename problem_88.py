@@ -4,8 +4,8 @@
 def all_substrings(text):
     substrings = []
     for i in range(len(text)):
-        for j in range(i+1, len(text)):
-            substrings.append(text[i:j])
+        for j in range(i, len(text)):
+            substrings.append(text[i:j+1])
     return substrings
 
 word = "abc"
