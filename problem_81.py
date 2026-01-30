@@ -12,6 +12,3 @@ def balanced_brackets(s):
             if not stack or pairs[stack.pop()] != char:
                 return False
     return len(stack) == 0
-
-expr = "{[()]}"
-print(f"Balanced: {balanced_brackets(expr)}")
