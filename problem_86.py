@@ -7,7 +7,10 @@ def diagonal_sum(matrix):
     for i in range(n):
         total += matrix[i][i]
         total += matrix[i][n-1-i]
+    
+    # Remove the middle element once for odd-sized matrices
+    if n % 2 == 1:
+        total -= matrix[n//2][n//2]
+    
     return total
 
-mat = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-print(f"Diagonal sum: {diagonal_sum(mat)}")
